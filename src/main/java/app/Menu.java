@@ -13,25 +13,25 @@ public class Menu {
 
             switch (PrintScanner.getIntNumber()) {
                 case 1:
-                    registration();
+
                     break;
                 case 2:
-                    printRegistration();
+
 
                     break;
                 case 3:
-                    allRegistation();
+
 
                     break;
                 case 4:
-                    allRegistation();
+
 
                     break;
                 case 5:
-                    allRegistation();
+
 
                 case 6:
-                    allRegistation();
+
 
                     break;
 
@@ -41,14 +41,7 @@ public class Menu {
         }
     }
 
-    private void allRegistation() {
-    }
 
-    private void printRegistration() {
-    }
-
-    private void registration() {
-    }
 }
 
 
