@@ -16,6 +16,7 @@ public class Logic {
     public void countStudent(List<User> userList) {
         for (User x : userList) {
 
+
         }
     }
 
