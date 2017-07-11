@@ -20,13 +20,15 @@ public class Logic {
         String lastName = sc.nextLine();
         System.out.println("Рік народження,місяць,дата");
         String date = sc.nextLine();
+        System.out.println("Введіть категорію");
+        String categori  =sc.nextLine();
         System.out.println("Enter name of city");
         String nameCity = sc.nextLine();
         System.out.println("Коробка автомат чи механіка");
         String transmission = sc.nextLine();
         System.out.println("номер телефону");
         String phoneNumber = sc.nextLine();
-        User user = new User(name, lastName, date, nameCity, transmission, phoneNumber);
+        User user = new User(name,lastName,date,categori,nameCity,transmission,phoneNumber);
         userList.add(user);
     }
 }
