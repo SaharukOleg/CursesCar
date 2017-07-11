@@ -1,5 +1,4 @@
 package user;
-
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -13,15 +12,9 @@ public class User {
     private String transmission;
     private String number;
 
-    public User(String name, String lastname, String dateOfBirsday, String category, String city, String transmission, String number) {
-        this.name = name;
-        this.lastname = lastname;
-        this.dateOfBirsday = dateOfBirsday;
-        this.category = category;
-        this.city = city;
-        this.transmission = transmission;
-        this.number = number;
+    public User(String name, String lastName, String date, String nameCity, String korobka, String phoneNumber) {
     }
+
 
     public String getName() {
         return name;

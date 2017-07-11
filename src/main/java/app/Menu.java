@@ -1,7 +1,13 @@
 package app;
 
+import logic.Logic;
+
+import java.util.Locale;
+
 public class Menu {
     public void show() {
+        Logic logic = new Logic();
+
         while (true) {
             System.out.println(">1 Зарейструватися");
             System.out.println(">2 Вивести зарейстрованих студентів");
@@ -13,25 +19,25 @@ public class Menu {
 
             switch (PrintScanner.getIntNumber()) {
                 case 1:
-                    registration();
+                    logic.addUser();
                     break;
                 case 2:
-                    printRegistration();
+
 
                     break;
                 case 3:
-                    allRegistation();
+
 
                     break;
                 case 4:
-                    allRegistation();
+
 
                     break;
                 case 5:
-                    allRegistation();
+
 
                 case 6:
-                    allRegistation();
+
 
                     break;
 
@@ -39,15 +45,6 @@ public class Menu {
                     System.exit(0);
             }
         }
-    }
-
-    private void allRegistation() {
-    }
-
-    private void printRegistration() {
-    }
-
-    private void registration() {
     }
 }
 
