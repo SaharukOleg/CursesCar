@@ -1,6 +1,7 @@
 package logic;
 
 
+import app.shared.Shared;
 import user.User;
 
 import java.util.ArrayList;
@@ -10,9 +11,6 @@ import java.util.Scanner;
 public class Logic {
 
     private Scanner sc = new Scanner(System.in);
-
-    public static List<User> userList = new ArrayList<>();
-
     public void addUser() {
         System.out.println("Enter  first name of user");
         String name = sc.nextLine();
@@ -26,7 +24,20 @@ public class Logic {
         String transmission = sc.nextLine();
         System.out.println("номер телефону");
         String phoneNumber = sc.nextLine();
-        User user = new User(name, lastName, date, nameCity, transmission, phoneNumber);
-        userList.add(user);
+
+
+    }
+
+    public void show(final List<User> userList) {
+        userList.forEach(System.out::println);
+    }
+
+
+    public void countStudent(List<User> userList) {
+        for (int i = 0; i < userList.size(); i++) {
+            System.out.println(userList.size());
+        }
+
+
     }
 }

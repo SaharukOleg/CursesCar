@@ -1,5 +1,6 @@
 package app;
 
+import app.shared.Shared;
 import logic.Logic;
 
 import java.util.Locale;
@@ -19,14 +20,15 @@ public class Menu {
 
             switch (PrintScanner.getIntNumber()) {
                 case 1:
+
                     logic.addUser();
                     break;
                 case 2:
-
+                    logic.show(Shared.userList);
 
                     break;
                 case 3:
-
+                    logic.show(Shared.userList);
 
                     break;
                 case 4:

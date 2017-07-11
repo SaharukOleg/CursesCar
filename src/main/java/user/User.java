@@ -1,7 +1,4 @@
 package user;
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
-
 public class User {
 
     private String name;
@@ -12,9 +9,15 @@ public class User {
     private String transmission;
     private String number;
 
-    public User(String name, String lastName, String date, String nameCity, String korobka, String phoneNumber) {
+    public User(String name, String lastname, String dateOfBirsday, String category, String city, String transmission, String number) {
+        this.name = name;
+        this.lastname = lastname;
+        this.dateOfBirsday = dateOfBirsday;
+        this.category = category;
+        this.city = city;
+        this.transmission = transmission;
+        this.number = number;
     }
-
 
     public String getName() {
         return name;
@@ -75,33 +78,30 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-
         if (o == null || getClass() != o.getClass()) return false;
 
         User user = (User) o;
 
-        return new EqualsBuilder()
-                .append(name, user.name)
-                .append(lastname, user.lastname)
-                .append(dateOfBirsday, user.dateOfBirsday)
-                .append(category, user.category)
-                .append(city, user.city)
-                .append(transmission, user.transmission)
-                .append(number, user.number)
-                .isEquals();
+        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        if (lastname != null ? !lastname.equals(user.lastname) : user.lastname != null) return false;
+        if (dateOfBirsday != null ? !dateOfBirsday.equals(user.dateOfBirsday) : user.dateOfBirsday != null)
+            return false;
+        if (category != null ? !category.equals(user.category) : user.category != null) return false;
+        if (city != null ? !city.equals(user.city) : user.city != null) return false;
+        if (transmission != null ? !transmission.equals(user.transmission) : user.transmission != null) return false;
+        return number != null ? number.equals(user.number) : user.number == null;
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-                .append(name)
-                .append(lastname)
-                .append(dateOfBirsday)
-                .append(category)
-                .append(city)
-                .append(transmission)
-                .append(number)
-                .toHashCode();
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        result = 31 * result + (dateOfBirsday != null ? dateOfBirsday.hashCode() : 0);
+        result = 31 * result + (category != null ? category.hashCode() : 0);
+        result = 31 * result + (city != null ? city.hashCode() : 0);
+        result = 31 * result + (transmission != null ? transmission.hashCode() : 0);
+        result = 31 * result + (number != null ? number.hashCode() : 0);
+        return result;
     }
 
     @Override
