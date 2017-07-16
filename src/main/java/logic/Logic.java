@@ -1,12 +1,8 @@
 package logic;
-
-
 import user.User;
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
-
 import static logic.Lists.userList;
 
 public class Logic {
@@ -52,8 +48,7 @@ public class Logic {
             User user = iterator.next();
             if (user.getCity().equals(nameCity)) {
                 System.out.println(user);
-            }
-            else {
+            } else {
                 System.out.println("sorry but there is no such student");
             }
         }
@@ -68,8 +63,7 @@ public class Logic {
             User user = iterator.next();
             if (user.getLastname().equals(lastName)) {
                 System.out.println(user);
-            }
-            else {
+            } else {
                 System.out.println("sorry but there is no such student");
             }
         }
@@ -87,8 +81,6 @@ public class Logic {
             }
         }
     }
-
-
 }
 
 

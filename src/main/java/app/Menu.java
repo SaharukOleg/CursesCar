@@ -1,17 +1,17 @@
 package app;
-import logic.Lists;
 import logic.Logic;
+import logic.Lists;
 public class Menu {
     public void start() {
         Logic logic = new Logic();
         while (true) {
-            System.out.println(">1 Зарейструватися");
-            System.out.println(">2 Вивести зарейстрованих студентів");
-            System.out.println(">3 Загальна кількість зарейстрованих");
-            System.out.println(">4 Загальна кількість зарейстрованих по місту");
-            System.out.println(">5 Пошук по прізвищу");
-            System.out.println(">6 Пошук по коробках передач");
-            System.out.println(">7 Вийти");
+            System.out.println(">1 Register");
+            System.out.println(">2 Show all  register students");
+            System.out.println(">3 General number of register students");
+            System.out.println(">4 General number of register students in city");
+            System.out.println(">5 Search by surname");
+            System.out.println(">6 Search by transmission");
+            System.out.println(">7 Exit");
 
             switch (PrintScanner.getIntNumber()) {
                 case 1:
@@ -36,11 +36,10 @@ public class Menu {
                     break;
                 case 6:
                     logic.searchByTransmission(Lists.userList);
-
                     break;
-
-                default:
-                    System.exit(0);
+                case 7:
+                    default:
+                        System.exit(0);
             }
         }
     }

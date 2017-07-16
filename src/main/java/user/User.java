@@ -1,7 +1,4 @@
 package user;
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
-
 public class User {
 
     private String name;
@@ -22,6 +19,9 @@ public class User {
         this.number = number;
     }
 
+    public User() {
+
+    }
 
     public String getName() {
         return name;
@@ -82,11 +82,11 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-
         if (o == null || getClass() != o.getClass()) return false;
 
         User user = (User) o;
 
+<<<<<<< HEAD
         return new EqualsBuilder()
                 .append(name, user.name)
                 .append(lastName, user.lastName)
@@ -96,10 +96,21 @@ public class User {
                 .append(transmission, user.transmission)
                 .append(number, user.number)
                 .isEquals();
+=======
+        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        if (lastname != null ? !lastname.equals(user.lastname) : user.lastname != null) return false;
+        if (dateOfBirsday != null ? !dateOfBirsday.equals(user.dateOfBirsday) : user.dateOfBirsday != null)
+            return false;
+        if (category != null ? !category.equals(user.category) : user.category != null) return false;
+        if (city != null ? !city.equals(user.city) : user.city != null) return false;
+        if (transmission != null ? !transmission.equals(user.transmission) : user.transmission != null) return false;
+        return number != null ? number.equals(user.number) : user.number == null;
+>>>>>>> f321a1a61ee575deabcb6503045e69dceeea2407
     }
 
     @Override
     public int hashCode() {
+<<<<<<< HEAD
         return new HashCodeBuilder(17, 37)
                 .append(name)
                 .append(lastName)
@@ -109,6 +120,16 @@ public class User {
                 .append(transmission)
                 .append(number)
                 .toHashCode();
+=======
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        result = 31 * result + (dateOfBirsday != null ? dateOfBirsday.hashCode() : 0);
+        result = 31 * result + (category != null ? category.hashCode() : 0);
+        result = 31 * result + (city != null ? city.hashCode() : 0);
+        result = 31 * result + (transmission != null ? transmission.hashCode() : 0);
+        result = 31 * result + (number != null ? number.hashCode() : 0);
+        return result;
+>>>>>>> f321a1a61ee575deabcb6503045e69dceeea2407
     }
 
     @Override
