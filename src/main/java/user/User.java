@@ -5,16 +5,16 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 public class User {
 
     private String name;
-    private String lastname;
+    private String lastName;
     private String dateOfBirsday;
     private String category;
     private String city;
     private String transmission;
     private String number;
 
-    public User(String name, String lastname, String dateOfBirsday, String category, String city, String transmission, String number) {
+    public User(String name, String lastName, String dateOfBirsday, String category, String city, String transmission, String number) {
         this.name = name;
-        this.lastname = lastname;
+        this.lastName = lastName;
         this.dateOfBirsday = dateOfBirsday;
         this.category = category;
         this.city = city;
@@ -32,11 +32,11 @@ public class User {
     }
 
     public String getLastname() {
-        return lastname;
+        return lastName;
     }
 
     public void setLastname(String lastname) {
-        this.lastname = lastname;
+        this.lastName = lastname;
     }
 
     public String getDateOfBirsday() {
@@ -89,7 +89,7 @@ public class User {
 
         return new EqualsBuilder()
                 .append(name, user.name)
-                .append(lastname, user.lastname)
+                .append(lastName, user.lastName)
                 .append(dateOfBirsday, user.dateOfBirsday)
                 .append(category, user.category)
                 .append(city, user.city)
@@ -102,7 +102,7 @@ public class User {
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
                 .append(name)
-                .append(lastname)
+                .append(lastName)
                 .append(dateOfBirsday)
                 .append(category)
                 .append(city)
@@ -115,7 +115,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", lastname='" + lastName + '\'' +
                 ", dateOfBirsday='" + dateOfBirsday + '\'' +
                 ", category='" + category + '\'' +
                 ", city='" + city + '\'' +

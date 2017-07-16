@@ -1,13 +1,9 @@
 package app;
-
+import logic.Lists;
 import logic.Logic;
-
-import java.util.Locale;
-
 public class Menu {
-    public void show() {
+    public void start() {
         Logic logic = new Logic();
-
         while (true) {
             System.out.println(">1 Зарейструватися");
             System.out.println(">2 Вивести зарейстрованих студентів");
@@ -19,24 +15,27 @@ public class Menu {
 
             switch (PrintScanner.getIntNumber()) {
                 case 1:
-                    logic.addUser();
+                    logic.addUser(Lists.userList);
+
                     break;
                 case 2:
+                    logic.print();
 
                     break;
                 case 3:
-
+                    logic.countStudent(Lists.userList);
 
                     break;
                 case 4:
-
+                    logic.countCity(Lists.userList);
 
                     break;
                 case 5:
+                    logic.searchByLastName(Lists.userList);
 
-
+                    break;
                 case 6:
-
+                    logic.searchByTransmission(Lists.userList);
 
                     break;
 
